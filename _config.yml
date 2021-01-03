@@ -1,3 +1,6 @@
+# See: https://theme-next.js.org/docs/getting-started/configuration
+# ===============================================================
+
 # ---------------------------------------------------------------
 # Theme Core Configuration Settings
 # See: https://theme-next.org/docs/theme-settings/
@@ -97,10 +100,10 @@ creative_commons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
 #scheme: Pisces
-#scheme: Gemini
+scheme: Gemini
 
 # Dark Mode
 darkmode: false
@@ -117,9 +120,9 @@ darkmode: false
 # External url should start with http:// or https://
 menu:
   home: / || fa fa-home
-  #about: /about/ || fa fa-user
-  #tags: /tags/ || fa fa-tags
-  #categories: /categories/ || fa fa-th
+  about: /about/ || fa fa-user
+  tags: /tags/ || fa fa-tags
+  categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
@@ -133,7 +136,7 @@ menu_settings:
 
 # ---------------------------------------------------------------
 # Sidebar Settings
-# See: https://theme-next.org/docs/theme-settings/sidebar
+# See: https://theme-next.js.org/docs/theme-settings/sidebar
 # ---------------------------------------------------------------
 
 sidebar:
@@ -163,9 +166,9 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: #/images/avatar.gif
+  url: /images/avatar.png #/images/avatar.gif
   # If true, the avatar will be dispalyed in circle.
-  rounded: false
+  rounded: true
   # If true, the avatar will be rotated with the cursor.
   rotated: false
 
@@ -177,8 +180,8 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  #GitHub: https://github.com/yourname || fab fa-github
-  #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
+  GitHub: https://github.com/cloudchenc || fab fa-github
+  E-Mail: mailto:cloudchenc@gmail.com || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
@@ -195,7 +198,7 @@ social_icons:
 
 # Blog rolls
 links_settings:
-  icon: fa fa-link
+  icon: fa fa-globe
   title: Links
   # Available values: block | inline
   layout: block
@@ -228,7 +231,7 @@ chat:
 
 # ---------------------------------------------------------------
 # Post Settings
-# See: https://theme-next.org/docs/theme-settings/posts
+# See: https://theme-next.js.org/docs/theme-settings/posts
 # ---------------------------------------------------------------
 
 # Automatically excerpt description in homepage as preamble text.
@@ -252,7 +255,9 @@ post_meta:
 symbols_count_time:
   separated_meta: true
   item_text_post: true
-  item_text_total: false
+  item_text_total: true
+  awl: 4
+  wpm: 275
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: false
@@ -261,13 +266,13 @@ tag_icon: false
 # Front-matter variable (unsupport animation).
 reward_settings:
   # If true, reward will be displayed in every article by default.
-  enable: false
+  enable: true
   animation: false
-  #comment: Donate comment here.
+  comment: Buy me a cup of coffee
 
 reward:
-  #wechatpay: /images/wechatpay.png
-  #alipay: /images/alipay.png
+  wechatpay: /images/wechatpay.png
+  alipay: /images/alipay.png
   #paypal: /images/paypal.png
   #bitcoin: /images/bitcoin.png
 
@@ -316,7 +321,9 @@ tagcloud:
   max: 30 # Maxium font size in px
   start: "#ccc" # Start color (hex, rgba, hsla or color keywords)
   end: "#111" # End color (hex, rgba, hsla or color keywords)
-  amount: 200 # Amount of tags, change it if you have more than 200 tags
+  amount: 200 # Total amount of tags
+  orderby: name # Order of tags
+  order: 1 # Sort order
 
 # Google Calendar
 # Share your recent schedule to others via calendar page.
@@ -633,12 +640,12 @@ livere_uid: # <your_uid>
 # Gitalk
 # For more information: https://gitalk.github.io, https://github.com/gitalk/gitalk
 gitalk:
-  enable: false
-  github_id: # GitHub repo owner
-  repo: # Repository name to store issues
-  client_id: # GitHub Application Client ID
-  client_secret: # GitHub Application Client Secret
-  admin_user: # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
+  enable: true
+  github_id: cloudchenc # GitHub repo owner
+  repo: cloudchenc.github.io # Repository name to store issues
+  client_id: ef57090bf9f0ae7d94c1 # GitHub Application Client ID
+  client_secret: acafe43237513f6d56ca91fd2e9249241267e661 # GitHub Application Client Secret
+  admin_user: cloudchenc # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
   distraction_free_mode: true # Facebook-like distraction free mode
   # Gitalk's display language depends on user's browser or system environment
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
@@ -889,6 +896,14 @@ vendors:
   # fontawesome: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css
   # fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css
   fontawesome:
+
+  # Prism
+  # prism: //cdn.jsdelivr.net/npm/prismjs@1/components/prism-core.min.js
+  # prism_autoloader: //cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js
+  # prism_line_numbers: //cdn.jsdelivr.net/npm/prismjs@1/plugins/line-numbers/prism-line-numbers.js
+  prism:
+  prism_autoloader:
+  prism_line_numbers:
 
   # MathJax
   # mathjax: //cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
